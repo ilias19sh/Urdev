@@ -10,9 +10,6 @@ const Footer = () => {
           <Link to="/" className="text-gray-400 hover:text-red-500">
             Accueil
           </Link>
-          <Link to="/about" className="text-gray-400 hover:text-red-500">
-            À Propos
-          </Link>
           <Link to="/services" className="text-gray-400 hover:text-red-500">
             Services
           </Link>
