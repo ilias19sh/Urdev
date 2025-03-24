@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/70 to-black/70 z-10"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5 z-20"></div>
         <img 
-          src="/images/hero-background.jpg" 
+          src="/images/hero.jpg" 
           alt="Background" 
           className="absolute inset-0 w-full h-full object-cover"
           onError={(e) => {

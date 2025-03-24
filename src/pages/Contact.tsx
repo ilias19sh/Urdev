@@ -18,7 +18,16 @@ const Contact = () => {
     <>
       {/* Header avec arrière-plan */}
       <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-600 opacity-90"></div>
+      <img 
+          src="/images/contact.jpg" 
+          alt="Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+            document.querySelector('.fallback-bg')?.classList.remove('hidden');
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900 opacity-90"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-space-grotesk">
@@ -92,12 +101,7 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="rounded-xl overflow-hidden shadow-lg h-64 bg-gray-200">
-                {/* Ici vous pourriez intégrer une carte Google Maps */}
-                <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                  <p className="text-gray-500">Carte de localisation</p>
-                </div>
-              </div>
+
             </div>
             
             {/* Formulaire de contact */}

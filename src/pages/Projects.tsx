@@ -64,8 +64,19 @@ const Projects = () => {
     <>
       {/* Header avec arrière-plan */}
       <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-90"></div>
+      <img 
+          src="/images/projets.jpg" 
+          alt="Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+            document.querySelector('.fallback-bg')?.classList.remove('hidden');
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-900 to-gray-800 opacity-90"></div>
+        
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-space-grotesk">
             Nos Réalisations
