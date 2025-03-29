@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check, Zap, Shield, Clock } from 'lucide-react';
 
-const Services = () => {
+const ServicesSection = () => {
   const plans = [
     {
       name: 'Site Vitrine',
@@ -68,13 +68,14 @@ const Services = () => {
   ];
 
   return (
-    <>
+    <section id="services" className="relative scroll-mt-16">
       {/* Header avec arrière-plan */}
-      <div className="relative py-24 overflow-hidden ">
-      <img 
-          src="/images/services.jpg" 
-          alt="Background" 
+      <div className="relative py-24 overflow-hidden">
+        <img 
+          src="https://fast.image.delivery/xuprktp.jpg" 
+          alt="Création de sites web professionnels et services de développement web à Lille par Urdev" 
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
             document.querySelector('.fallback-bg')?.classList.remove('hidden');
@@ -83,9 +84,9 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900 to-red-600 opacity-90"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-space-grotesk">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-space-grotesk">
             Nos Services
-          </h1>
+          </h2>
           <p className="mt-6 max-w-2xl mx-auto text-xl text-red-100">
             Des solutions web sur mesure pour répondre à tous vos besoins digitaux
           </p>
@@ -96,7 +97,7 @@ const Services = () => {
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-red-600">Nos Forfaits</h2>
+            <h3 className="text-base font-semibold leading-7 text-red-600">Nos Forfaits</h3>
             <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl highlight-title">
               Des solutions adaptées à vos besoins
             </p>
@@ -119,9 +120,9 @@ const Services = () => {
                   <div className={`h-12 w-12 rounded-lg mb-4 bg-gradient-to-r ${plan.color} flex items-center justify-center shadow-lg`}>
                     <span className="text-white font-bold text-lg">{plan.name.charAt(0)}</span>
                   </div>
-                  <h3 className="text-xl font-semibold leading-8 text-gray-900">
+                  <h4 className="text-xl font-semibold leading-8 text-gray-900">
                     {plan.name}
-                  </h3>
+                  </h4>
                   <p className="mt-2 text-sm text-gray-600">
                     {plan.description}
                   </p>
@@ -138,8 +139,8 @@ const Services = () => {
                   </ul>
                 </div>
                 <a
-                  href="/contact"
-                  className={`mt-8 block rounded-md px-3.5 py-3 text-center text-sm font-semibold leading-6 text-white shadow-lg hover:scale-105 transition duration-300 ${plan.popular ? 'bg-gradient-to-r from-red-600 to-red-700' : 'bg-gray-900'}`}
+                  href="#contact"
+                  className={`mt-8 block rounded-md px-3.5 py-3 text-center text-sm font-semibold leading-6 text-white shadow-lg hover:scale-105 transition duration-300 cta-button ${plan.popular ? 'bg-gradient-to-r from-red-600 to-red-700' : 'bg-gray-900'}`}
                 >
                   {plan.popular ? 'Commencer maintenant' : 'Commencer'}
                 </a>
@@ -153,9 +154,9 @@ const Services = () => {
       <div className="bg-gray-50 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl highlight-title">
+            <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl highlight-title">
               Pourquoi nous choisir ?
-            </h2>
+            </h3>
             <p className="mt-4 text-lg text-gray-600">
               Des avantages concrets pour vous garantir un service de qualité
             </p>
@@ -172,15 +173,15 @@ const Services = () => {
                     <advantage.icon className="h-6 w-6 text-red-600" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-center mb-2">{advantage.title}</h3>
+                <h4 className="text-lg font-semibold text-center mb-2">{advantage.title}</h4>
                 <p className="text-gray-600 text-center">{advantage.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
-export default Services;
+export default ServicesSection; 

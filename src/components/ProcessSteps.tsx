@@ -17,7 +17,7 @@ const steps = [
   {
     icon: Layout,
     title: 'Design',
-    description: 'Nous créons une maquette visuelle de votre site pour validation avant le développement.',
+    description: 'Nous créons une architecture votre site pour validation avant le développement.',
     color: 'bg-purple-500'
   },
   {
@@ -80,7 +80,7 @@ const ProcessSteps = () => {
 
         <div className="mt-16 text-center">
           <a 
-            href="/services" 
+            href="#services" 
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 transition-colors duration-300"
           >
             En savoir plus sur nos services

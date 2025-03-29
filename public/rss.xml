@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog Urdev - Actualités du développement web à Lille</title>
+    <link>https://urdev.fr/blog</link>
+    <description>Découvrez nos articles sur le développement web, le SEO et les tendances digitales</description>
+    <language>fr-fr</language>
+    <lastBuildDate>Sat, 29 Mar 2025 12:00:00 GMT</lastBuildDate>
+    
+    <item>
+      <title>Comment choisir la meilleure technologie pour votre site web en 2025</title>
+      <link>https://urdev.fr/blog/choisir-technologie-site-web-2025</link>
+      <description>Guide complet pour choisir la stack technique adaptée à votre projet web</description>
+      <pubDate>Sat, 29 Mar 2025 10:00:00 GMT</pubDate>
+      <guid>https://urdev.fr/blog/choisir-technologie-site-web-2025</guid>
+    </item>
+    <!-- Ajoutez les autres articles ici -->
+  </channel>
+</rss> 

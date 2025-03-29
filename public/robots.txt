@@ -1,0 +1,7 @@
+# www.robotstxt.org
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://urdev.fr/sitemap.xml 

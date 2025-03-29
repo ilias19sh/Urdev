@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { ExternalLink, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 const projects = [
   {
     title: 'E-commerce Mode',
     description: 'Boutique en ligne de vêtements avec plus de 1000 produits. Interface utilisateur intuitive et système de paiement sécurisé.',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8',
+    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/c4bc2307-e0f3-41ca-c34c-2dc16de44400/public',
+    alt: 'Site e-commerce de mode avec interface utilisateur intuitive',
     tags: ['E-commerce', 'React', 'Node.js'],
     client: 'FashionHub',
     year: '2023',
@@ -13,7 +14,8 @@ const projects = [
   {
     title: 'Application Immobilière',
     description: 'Plateforme de gestion immobilière pour agents avec dashboard analytique et gestion des rendez-vous en temps réel.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa',
+    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/5df72d9b-c4cf-48b1-a9d7-c9f25eb45900/public',
+    alt: 'Application web immobilière avec tableau de bord analytique',
     tags: ['SaaS', 'React', 'API REST'],
     client: 'ImmoTech',
     year: '2022',
@@ -21,7 +23,8 @@ const projects = [
   {
     title: 'Restaurant Gastronomique',
     description: 'Site vitrine avec réservation en ligne et présentation interactive du menu. Optimisé pour la conversion et l\'expérience utilisateur.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4',
+    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/1fa96c6a-aa6c-480d-2db5-0f9b0c9bad00/public',
+    alt: 'Site web responsive pour restaurant avec système de réservation en ligne',
     tags: ['Site Vitrine', 'Réservation', 'SEO'],
     client: 'Le Gourmet',
     year: '2023',
@@ -29,7 +32,8 @@ const projects = [
   {
     title: 'Blog Lifestyle',
     description: 'Plateforme de blog avec gestion de contenu personnalisée, monétisation et intégration aux réseaux sociaux.',
-    image: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b',
+    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/8a8be68f-4e8f-44b1-97ae-f4e07e91fc00/public',
+    alt: 'Blog lifestyle avec système de gestion de contenu personnalisé',
     tags: ['Blog', 'WordPress', 'SEO'],
     client: 'Urban Life',
     year: '2022',
@@ -37,7 +41,8 @@ const projects = [
   {
     title: 'Application Fitness',
     description: 'Application mobile de suivi fitness avec plans d\'entraînement personnalisés et suivi des progrès en temps réel.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438',
+    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/42b8ad51-2d38-44cb-4cfd-59fea4d66f00/public',
+    alt: 'Application mobile fitness avec suivi d\'entraînement personnalisé',
     tags: ['Mobile', 'React Native', 'API'],
     client: 'FitTrack',
     year: '2023',
@@ -45,42 +50,42 @@ const projects = [
   {
     title: 'Portfolio Photographe',
     description: 'Portfolio minimaliste mettant en valeur les œuvres du photographe avec une galerie interactive et un système de réservation.',
-    image: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d',
+    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/c3a22d4a-e29d-4cad-1dd0-d00c3e5d9000/public',
+    alt: 'Portfolio photographe avec galerie interactive et système de réservation',
     tags: ['Portfolio', 'Galerie', 'Réservation'],
     client: 'ArtLens Studio',
     year: '2022',
   },
 ];
 
-const Projects = () => {
+const ProjectsSection = () => {
   const [filter, setFilter] = useState('Tous');
   const categories = ['Tous', 'E-commerce', 'Site Vitrine', 'SaaS', 'Mobile', 'Blog', 'Portfolio'];
   
   const filteredProjects = filter === 'Tous' 
-    ? projects 
-    : projects.filter(project => project.tags.includes(filter));
+    ? projects.slice(0, 3) // Afficher seulement 3 projets sur la page d'accueil
+    : projects.filter(project => project.tags.includes(filter)).slice(0, 3);
 
   return (
-    <>
+    <section id="portfolio" className="relative scroll-mt-16">
       {/* Header avec arrière-plan */}
       <div className="relative py-24 overflow-hidden">
-      <img 
-          src="/images/projets.jpg" 
-          alt="Background" 
+        <img 
+          src="https://image.delivery/page/gkvjsec" 
+          alt="Portfolio de projets web et réalisations de sites internet à Lille par Urdev" 
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
             document.querySelector('.fallback-bg')?.classList.remove('hidden');
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-pink-900 to-gray-800 opacity-90"></div>
-        
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-space-grotesk">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-space-grotesk">
             Nos Réalisations
-          </h1>
+          </h2>
           <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-300">
             Découvrez notre portfolio de projets et laissez-vous inspirer par notre expertise
           </p>
@@ -110,17 +115,18 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <article 
                 key={project.title} 
-                className="flex flex-col overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-3d animate-fade-in-up bg-white"
+                className="flex flex-col overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-3d animate-fade-in-up project-card"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 z-10"></div>
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={project.alt}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
+                    loading="lazy"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://via.placeholder.com/400x300?text=Image+non+disponible';
+                      e.currentTarget.src = 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/d07c0ec4-49a4-4afd-9172-7ad51b4c5b00/public';
                     }}
                   />
                   <div className="absolute bottom-4 left-4 z-20">
@@ -153,10 +159,10 @@ const Projects = () => {
                     <span className="text-sm font-medium text-gray-500">
                       Client: {project.client}
                     </span>
-                    <a href="#" className="flex items-center text-red-600 hover:text-red-800 text-sm font-medium group">
+                    <button className="flex items-center text-red-600 hover:text-red-800 text-sm font-medium group">
                       <span>Voir détails</span>
                       <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -168,31 +174,19 @@ const Projects = () => {
               <p className="text-gray-500">Aucun projet ne correspond à ce filtre.</p>
             </div>
           )}
-        </div>
-      </div>
-
-      {/* Section CTA */}
-      <div className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Vous avez un projet en tête ?</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Contactez-nous pour discuter de votre projet et recevoir un devis personnalisé
-            </p>
-            <div className="mt-8">
-              <a 
-                href="/contact" 
-                className="inline-flex items-center rounded-md bg-red-600 px-6 py-3 text-base font-medium text-white shadow-lg hover:bg-red-700 transition-colors duration-300"
-              >
-                Commencer votre projet
-                <ExternalLink className="ml-2 h-5 w-5" />
-              </a>
-            </div>
+          
+          <div className="text-center mt-12">
+            <a 
+              href="#contact" 
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 transition-colors duration-300 cta-button"
+            >
+              Discuter de votre projet
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
-export default Projects;
+export default ProjectsSection; 

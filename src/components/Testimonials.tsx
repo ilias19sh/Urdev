@@ -4,7 +4,7 @@ import { Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Sophie Martin',
+    name: 'Sophie Van derbrook',
     role: 'Fondatrice, Bloom Studio',
     image: '/images/testimonial-1.jpg',
     content: 'Urdev a créé un site web qui a dépassé toutes nos attentes. Leur approche professionnelle et leur attention aux détails ont fait toute la différence.',
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'Thomas Dubois',
+    name: 'Théo Belkassem',
     role: 'CEO, TechStart',
     image: '/images/testimonial-2.jpg',
     content: 'Nous avions besoin d\'un site web rapidement et Urdev a livré en temps record sans compromettre la qualité. Je les recommande vivement !',
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: 'Émilie Leroux',
+    name: 'Émilie Leroy',
     role: 'Responsable Marketing, Eco Solutions',
     image: '/images/testimonial-3.jpg',
     content: 'Le site créé par Urdev nous a permis d\'augmenter notre taux de conversion de 40%. Un investissement qui en valait vraiment la peine.',
