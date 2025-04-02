@@ -5,11 +5,8 @@ const HeroSection = () => {
   return (
     <section id="accueil" className="relative min-h-screen overflow-hidden">
       {/* Background image avec overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/70 to-black/70 z-10"></div>
-        <div className="absolute inset-0 bg-grid-pattern opacity-5 z-20"></div>
-        <img 
-          src="https://fast.image.delivery/page/hiuzwar" 
+      <img 
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Agence web à Lille - Conception de sites internet professionnels par Urdev" 
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
@@ -19,6 +16,11 @@ const HeroSection = () => {
             document.querySelector('.fallback-bg')?.classList.remove('hidden');
           }}
         />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br bg-opacity-50 from-red-900/70 to-black/70 z-10"></div>
+        
+        <div className="absolute inset-0 bg-grid-pattern opacity-5 z-20"></div>
+        
         <div className="fallback-bg hidden absolute inset-0 bg-gradient-to-br from-red-600 to-red-900"></div>
       </div>
       

@@ -1,0 +1,64 @@
+{
+  "short_name": "Urdev",
+  "name": "Urdev - Développement Web",
+  "description": "Création de sites web et d'applications performantes",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Nous contacter",
+      "short_name": "Contact",
+      "description": "Envoyer un message",
+      "url": "/#contact",
+      "icons": [{ "src": "/icons/contact.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nos projets",
+      "short_name": "Projets",
+      "description": "Voir nos projets récents",
+      "url": "/#projects",
+      "icons": [{ "src": "/icons/projects.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide"
+    },
+    {
+      "src": "/screenshots/mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "platform": "narrow"
+    }
+  ]
+} 

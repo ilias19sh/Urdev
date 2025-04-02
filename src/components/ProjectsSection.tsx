@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'E-commerce Mode',
     description: 'Boutique en ligne de vêtements avec plus de 1000 produits. Interface utilisateur intuitive et système de paiement sécurisé.',
-    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/c4bc2307-e0f3-41ca-c34c-2dc16de44400/public',
+    image: 'https://images.unsplash.com/photo-1584515932025-1c1c1c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGVjb21tZXJjZXxlbnwwfHx8fDE2MjY0MjY0Mjg&ixlib=rb-1.2.1&q=80&w=400',
     alt: 'Site e-commerce de mode avec interface utilisateur intuitive',
     tags: ['E-commerce', 'React', 'Node.js'],
     client: 'FashionHub',
@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Application Immobilière',
     description: 'Plateforme de gestion immobilière pour agents avec dashboard analytique et gestion des rendez-vous en temps réel.',
-    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/5df72d9b-c4cf-48b1-a9d7-c9f25eb45900/public',
+    image: 'https://images.unsplash.com/photo-1584515932025-1c1c1c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxpbW1vYmlsaWVyaXxlbnwwfHx8fDE2MjY0MjY0Mjg&ixlib=rb-1.2.1&q=80&w=400',
     alt: 'Application web immobilière avec tableau de bord analytique',
     tags: ['SaaS', 'React', 'API REST'],
     client: 'ImmoTech',
@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'Restaurant Gastronomique',
     description: 'Site vitrine avec réservation en ligne et présentation interactive du menu. Optimisé pour la conversion et l\'expérience utilisateur.',
-    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/1fa96c6a-aa6c-480d-2db5-0f9b0c9bad00/public',
+    image: 'https://images.unsplash.com/photo-1584515932025-1c1c1c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxyaXN0YXVyYW50fGVufDB8fHx8fDE2MjY0MjY0Mjg&ixlib=rb-1.2.1&q=80&w=400',
     alt: 'Site web responsive pour restaurant avec système de réservation en ligne',
     tags: ['Site Vitrine', 'Réservation', 'SEO'],
     client: 'Le Gourmet',
@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'Blog Lifestyle',
     description: 'Plateforme de blog avec gestion de contenu personnalisée, monétisation et intégration aux réseaux sociaux.',
-    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/8a8be68f-4e8f-44b1-97ae-f4e07e91fc00/public',
+    image: 'https://images.unsplash.com/photo-1584515932025-1c1c1c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHxibG9nfGVufDB8fHx8fDE2MjY0MjY0Mjg&ixlib=rb-1.2.1&q=80&w=400',
     alt: 'Blog lifestyle avec système de gestion de contenu personnalisé',
     tags: ['Blog', 'WordPress', 'SEO'],
     client: 'Urban Life',
@@ -41,7 +41,7 @@ const projects = [
   {
     title: 'Application Fitness',
     description: 'Application mobile de suivi fitness avec plans d\'entraînement personnalisés et suivi des progrès en temps réel.',
-    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/42b8ad51-2d38-44cb-4cfd-59fea4d66f00/public',
+    image: 'https://images.unsplash.com/photo-1584515932025-1c1c1c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE0fHxmaXRuZXNzfGVufDB8fHx8fDE2MjY0MjY0Mjg&ixlib=rb-1.2.1&q=80&w=400',
     alt: 'Application mobile fitness avec suivi d\'entraînement personnalisé',
     tags: ['Mobile', 'React Native', 'API'],
     client: 'FitTrack',
@@ -50,12 +50,13 @@ const projects = [
   {
     title: 'Portfolio Photographe',
     description: 'Portfolio minimaliste mettant en valeur les œuvres du photographe avec une galerie interactive et un système de réservation.',
-    image: 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/c3a22d4a-e29d-4cad-1dd0-d00c3e5d9000/public',
+    image: 'https://images.unsplash.com/photo-1584515932025-1c1c1c1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE1fHxwb3J0Zm9saW98ZW58MHx8fHwxNjI2NDI2NDI4&ixlib=rb-1.2.1&q=80&w=400',
     alt: 'Portfolio photographe avec galerie interactive et système de réservation',
     tags: ['Portfolio', 'Galerie', 'Réservation'],
     client: 'ArtLens Studio',
     year: '2022',
   },
+
 ];
 
 const ProjectsSection = () => {
@@ -71,7 +72,7 @@ const ProjectsSection = () => {
       {/* Header avec arrière-plan */}
       <div className="relative py-24 overflow-hidden">
         <img 
-          src="https://image.delivery/page/gkvjsec" 
+          src="https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Portfolio de projets web et réalisations de sites internet à Lille par Urdev" 
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -126,7 +127,7 @@ const ProjectsSection = () => {
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
                     loading="lazy"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://imagedelivery.net/3PeG7YrQHO9gc2xtk-i_RQ/d07c0ec4-49a4-4afd-9172-7ad51b4c5b00/public';
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
                     }}
                   />
                   <div className="absolute bottom-4 left-4 z-20">

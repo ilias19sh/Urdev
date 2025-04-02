@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vous êtes hors-ligne</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #212529;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      margin-top: 0;
+      color: #dc3545;
+      font-size: 1.8rem;
+    }
+    
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #0a58ca;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #212529;
+        color: #f8f9fa;
+      }
+      
+      .container {
+        background-color: #343a40;
+      }
+      
+      h1 {
+        color: #f8d7da;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">📶</div>
+    <h1>Vous êtes hors-ligne</h1>
+    <p>
+      Il semble que vous n'ayez pas de connexion internet active en ce moment.
+      Certaines fonctionnalités pourraient ne pas être disponibles.
+    </p>
+    <p>
+      Les pages que vous avez déjà visitées devraient rester accessibles.
+      Veuillez vous reconnecter à Internet pour accéder à toutes les fonctionnalités.
+    </p>
+    <button class="btn" onclick="window.location.reload()">Réessayer</button>
+  </div>
+  
+  <script>
+    // Vérifier périodiquement si la connexion est rétablie
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+    
+    // Si un bouton de retour existe dans l'historique
+    if (window.history.length > 1) {
+      document.querySelector('.btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.history.back();
+      });
+    }
+  </script>
+</body>
+</html> 
